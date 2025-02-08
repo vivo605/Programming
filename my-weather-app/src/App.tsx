@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import notFondLogo from './assets/404.png'
+import cleareLogo from './assets/clear.png'
+import cloudLogo from './assets/cloud.png'
+import mistLogo from './assets/mist.png'
+import rainLogo from './assets/rain.png'
+import showLogo from './assets/snow.png'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="card">  
+        <div className="screach">
+          <input type="text" placeholder="Enter your location" className='screach-inp'></input>
+          <button className="screach-button"></button>
+        </div>   
+        <div className="notFond">
+          <img src={notFondLogo}/>
+          <p>Упс тут нечего нет</p>
+        </div>
+        <div className="result-screach">
+          <div className="image">
+            <img src={cleareLogo}/>
+            <img src={cloudLogo} />
+            <img src={rainLogo}/>
+            <img src={showLogo}/>
+          </div>
+          <div className="spead-widh">
+            <img src={mistLogo}/>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
